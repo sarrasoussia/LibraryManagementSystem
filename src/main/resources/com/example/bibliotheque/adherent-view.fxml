@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.cell.PropertyValueFactory?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.paint.Color?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="564.0" prefWidth="919.0" style="-fx-background-color: #f1ebff;" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.bibliotheque.Controller.AdherentController">
+    <Label alignment="CENTER" contentDisplay="CENTER" layoutX="49.0" layoutY="75.0" prefHeight="64.0" prefWidth="190.0" text="Add/Delete an Adherent" textAlignment="CENTER">
+        <font>
+            <Font name="Arial Rounded MT Bold" size="15.0" />
+        </font>
+    </Label>
+    <TextField fx:id="nameField" layoutX="70.0" layoutY="173.0" />
+    <Label layoutX="75.0" layoutY="145.0" text="Add Adherent Name:">
+        <font>
+            <Font size="15.0" />
+        </font>
+    </Label>
+    <Label layoutX="66.0" layoutY="205.0" text="Add Adherent Surname:">
+        <font>
+            <Font size="15.0" />
+        </font>
+    </Label>
+    <TextField fx:id="surnameField" layoutX="70.0" layoutY="234.0" />
+    <Label layoutX="81.0" layoutY="260.0" text="Add Adherent Age:">
+        <font>
+            <Font size="15.0" />
+        </font>
+    </Label>
+    <TextField fx:id="ageField" layoutX="71.0" layoutY="292.0" />
+
+    <Label layoutX="83.0" layoutY="321.0" text="Add Adherent CIN:">
+        <font>
+            <Font size="15.0" />
+        </font>
+    </Label>
+    <TextField fx:id="cinField" layoutX="71.0" layoutY="350.0" />
+
+<!--    <Label layoutX="76.0" layoutY="390.0" text="Membership Fee:">-->
+<!--        <font>-->
+<!--            <Font size="15.0" />-->
+<!--        </font>-->
+<!--    </Label>-->
+<!--    <TextField fx:id="feeField" layoutX="60.0" layoutY="412.0" />-->
+
+    <Button layoutX="82.0" layoutY="445.0" onAction="#addAdherentAction" prefHeight="31.0" prefWidth="125.0" text="Add Adherent" textFill="#cf55b4">
+        <font>
+            <Font name="Arial Rounded MT Bold" size="14.0" />
+        </font>
+    </Button>
+    <Button layoutX="62.0" layoutY="392.0" onAction="#removeAdherentAction" prefHeight="26.0" prefWidth="167.0" text="Delete Adherent by CIN" textFill="#cf55b4">
+        <font>
+            <Font name="Arial Rounded MT Bold" size="13.0" />
+        </font>
+    </Button>
+    <Button layoutX="23.0" layoutY="26.0" onAction="#goBackToAccueil" text="X" textFill="#dc235b">
+        <font>
+            <Font name="Arial Rounded MT Bold" size="13.0" />
+        </font>
+        <effect>
+            <DropShadow />
+        </effect>
+    </Button>
+
+    <Label layoutX="312.0" layoutY="25.0" prefHeight="50.0" prefWidth="391.0" text="Adherents List" textFill="#7443a4">
+        <font>
+            <Font name="Arial Rounded MT Bold" size="42.0" />
+        </font>
+      <effect>
+         <DropShadow>
+            <color>
+               <Color red="0.9088187217712402" green="0.8679922223091125" blue="0.9263157844543457" />
+            </color>
+         </DropShadow>
+      </effect>
+    </Label>
+    <Button layoutX="807.0" layoutY="75.0" mnemonicParsing="false" onAction="#searchAdherent" prefHeight="24.0" prefWidth="70.0" text="Search" textFill="#bc5185">
+        <font>
+            <Font name="Arial Rounded MT Bold" size="13.0" />
+        </font>
+    </Button>
+    <TextField fx:id="adherentName" layoutX="642.0" layoutY="74.0" promptText="Search by Name" />
+   <VBox alignment="CENTER" layoutX="262.0" layoutY="116.0" prefHeight="378.0" prefWidth="616.0">
+      <children>
+      
+          <TableView fx:id="adherentTableView" prefHeight="375.0" prefWidth="616.0">
+              <columns>
+                  <TableColumn editable="false" prefWidth="100" text="CIN">
+                      <cellValueFactory>
+                          <PropertyValueFactory property="cin" />
+                      </cellValueFactory>
+                  </TableColumn>
+                  <TableColumn editable="false" prefWidth="130" text="Surname">
+                      <cellValueFactory>
+                          <PropertyValueFactory property="name" />
+                      </cellValueFactory>
+                  </TableColumn>
+                  <TableColumn editable="false" prefWidth="133.60000610351562" text="Name">
+                      <cellValueFactory>
+                          <PropertyValueFactory property="surname" />
+                      </cellValueFactory>
+                  </TableColumn>
+                  <TableColumn editable="false" prefWidth="97.60003662109375" text="Age">
+                      <cellValueFactory>
+                          <PropertyValueFactory property="age" />
+                      </cellValueFactory>
+                  </TableColumn>
+              </columns>
+            <columnResizePolicy>
+               <TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
+            </columnResizePolicy>
+          </TableView>
+      </children>
+   </VBox>
+
+</AnchorPane>

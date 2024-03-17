@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="450.0" prefWidth="700.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.bibliotheque.Controller.WelcomeController">
+   <ImageView fitHeight="514.0" fitWidth="794.0" layoutX="-17.0" nodeOrientation="INHERIT" pickOnBounds="true" preserveRatio="true">
+      <image>
+         <Image url="@bg1.PNG" />
+      </image>
+   </ImageView>
+
+    <HBox />
+      <Button contentDisplay="CENTER" layoutX="139.0" layoutY="282.0" onAction="#openAdherentList" prefWidth="150" text="Adherent List" textFill="#5333bc">
+      <font>
+         <Font name="Arial Rounded MT Bold" size="15.0" />
+      </font>
+      <effect>
+         <DropShadow />
+      </effect>
+   </Button>
+      <Button contentDisplay="CENTER" layoutX="123.0" layoutY="167.0" onAction="#openEmpruntManagement" prefHeight="22.0" prefWidth="182.0" text="Emprunt Management" textFill="#845a83">
+      <font>
+         <Font name="Arial Rounded MT Bold" size="14.0" />
+      </font>
+      <effect>
+         <DropShadow />
+      </effect>
+   </Button>
+      <Button contentDisplay="CENTER" layoutX="139.0" layoutY="234.0" onAction="#openBookList" prefWidth="150" text="Book List" textFill="#5333bc">
+      <font>
+         <Font name="Arial Rounded MT Bold" size="15.0" />
+      </font>
+      <effect>
+         <DropShadow />
+      </effect>
+   </Button>
+      <Button contentDisplay="CENTER" layoutX="123.0" layoutY="123.0" onAction="#openAdherentManagement" prefHeight="27.0" prefWidth="182.0" text="Adherents Management" textFill="#845a83">
+      <font>
+         <Font name="Arial Rounded MT Bold" size="14.0" />
+      </font>
+      <effect>
+         <DropShadow />
+      </effect>
+   </Button>
+      <Button alignment="CENTER" contentDisplay="CENTER" layoutX="123.0" layoutY="80.0" onAction="#openBookManagement" prefHeight="26.0" prefWidth="182.0" text="Books Management" textFill="#845a83">
+      <font>
+         <Font name="Arial Rounded MT Bold" size="14.0" />
+      </font>
+      <effect>
+         <DropShadow />
+      </effect>
+   </Button>
+      <Button contentDisplay="CENTER" layoutX="64.0" layoutY="412.0" onAction="#logOut" prefHeight="31.0" prefWidth="118.0" text="Log out" textFill="#356791">
+      <font>
+         <Font name="Arial Rounded MT Bold" size="16.0" />
+      </font>
+      <effect>
+         <DropShadow />
+      </effect>
+   </Button>
+
+</AnchorPane>

@@ -1,0 +1,136 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Tab?>
+<?import javafx.scene.control.TabPane?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.effect.ColorAdjust?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<VBox maxHeight="450.0" maxWidth="700.0" minHeight="450.0" minWidth="700.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.bibliotheque.Controller.BooksController">
+    <TabPane tabClosingPolicy="UNAVAILABLE" VBox.vgrow="ALWAYS">
+        <tabs>
+            <!-- Add/Delete a book tab -->
+            <Tab text="Add/Delete a book">
+                <content>
+               <Pane style="-fx-background-color: #fcebf4;">
+                  <children>
+                     <Pane layoutX="140.0" layoutY="-10.0" prefHeight="460.0" prefWidth="421.0" style="-fx-background-color: white;">
+                        <effect>
+                           <ColorAdjust brightness="0.6" contrast="0.09" />
+                        </effect>
+                     </Pane>
+                     <Button alignment="CENTER" layoutX="29.0" layoutY="25.0" onAction="#goBackToAccueil" prefHeight="26.0" prefWidth="31.0" text="X" textAlignment="CENTER" textFill="#cc78b1">
+                        <font>
+                           <Font name="System Bold" size="12.0" />
+                        </font>
+                        <effect>
+                           <DropShadow />
+                        </effect>
+                     </Button>
+                           <Label layoutX="213.0" layoutY="149.0" text="Book ISBN:">
+                        <font>
+                           <Font size="16.0" />
+                        </font>
+                     </Label>
+                           <TextField fx:id="isbnField" layoutX="331.0" layoutY="149.0" maxWidth="200.0" />
+                           <Label layoutX="215.0" layoutY="191.0" text="Book Title:">
+                        <font>
+                           <Font size="16.0" />
+                        </font>
+                     </Label>
+                           <TextField fx:id="titleField" layoutX="331.0" layoutY="191.0" maxWidth="200.0" />
+                           <Label layoutX="205.0" layoutY="229.0" text="Book Author:">
+                        <font>
+                           <Font size="16.0" />
+                        </font>
+                     </Label>
+                           <TextField fx:id="authorField" layoutX="331.0" layoutY="229.0" maxWidth="200.0" />
+                            <Button layoutX="215.0" layoutY="282.0" onAction="#addBookAction" prefHeight="25.0" prefWidth="105.0" text="Add Book" textFill="#7b3b66">
+                        <font>
+                           <Font name="System Bold" size="12.0" />
+                        </font>
+                            </Button>
+                            <Button layoutX="343.0" layoutY="282.0" onAction="#removeBookAction" prefHeight="25.0" prefWidth="112.0" text="Delete Book" textFill="#6e365f">
+                        <font>
+                           <Font name="System Bold" size="12.0" />
+                        </font>
+                            </Button>
+                           <Label layoutX="237.0" layoutY="76.0" text="Add/Delete a Book" textFill="#5b35a6">
+                        <font>
+                           <Font name="Arial Rounded MT Bold" size="21.0" />
+                        </font>
+                     </Label>
+                  </children>
+               </Pane>
+                </content>
+            </Tab>
+         <Tab text="Search a Book">
+            <content>
+               <VBox alignment="CENTER" spacing="10" style="-fx-background-color: #fcdef5;">
+                  <children>
+                     <Pane prefHeight="496.0" prefWidth="700.0" style="-fx-background-color: #fcdeeb;">
+                        <children>
+                           <Pane layoutX="-5.0" layoutY="63.0" prefHeight="281.0" prefWidth="708.0" style="-fx-background-color: white;">
+                              <children>
+                                 <Label layoutX="247.0" layoutY="14.0" text="Search a Book" textFill="#5b35a6">
+                                    <font>
+                                       <Font name="Arial Rounded MT Bold" size="26.0" />
+                                    </font>
+                                 </Label>
+                              </children>
+                           </Pane>
+                           <Label layoutX="215.0" layoutY="132.0" text="Search by Title:">
+                              <font>
+                                 <Font size="16.0" />
+                              </font>
+                           </Label>
+                           <TextField fx:id="searchTitleField" layoutX="364.0" layoutY="132.0" maxWidth="200.0" />
+
+                           <Label layoutX="205.0" layoutY="176.0" text="Search by Author:">
+                              <font>
+                                 <Font size="16.0" />
+                              </font>
+                           </Label>
+                           <TextField fx:id="searchAuthorField" layoutX="364.0" layoutY="176.0" maxWidth="200.0" />
+
+                           <Label layoutX="189.0" layoutY="226.0" text="Search by First Letters:">
+                              <font>
+                                 <Font size="16.0" />
+                              </font>
+                           </Label>
+                           <TextField fx:id="searchFirstLettersField" layoutX="364.0" layoutY="226.0" maxWidth="200.0" />
+                           <Button layoutX="269.0" layoutY="287.0" onAction="#searchBookAction" prefHeight="25.0" prefWidth="162.0" text="Search " textFill="#7b3b66">
+                              <font>
+                                 <Font name="System Bold" size="12.0" />
+                              </font>
+                           </Button>
+                           <Button alignment="CENTER" layoutX="30.0" layoutY="26.0" onAction="#goBackToAccueil" prefHeight="26.0" prefWidth="31.0" text="X" textAlignment="CENTER" textFill="#cc78b1">
+                              <font>
+                                 <Font name="System Bold" size="12.0" />
+                              </font>
+                              <effect>
+                                 <DropShadow />
+                              </effect>
+                           </Button>
+                        </children>
+                     </Pane>
+                  </children>
+                  <effect>
+                     <ColorAdjust />
+                  </effect>
+                  <cursor>
+                     <Cursor fx:constant="DEFAULT" />
+                  </cursor>
+               </VBox>
+            </content>
+         </Tab>
+
+        </tabs>
+    </TabPane>
+</VBox>
